@@ -58,82 +58,84 @@ func (b *BlockStats) OneHourEfficency() float32 {
 	var oneHourEfficency float32
 	if b.OneHourhShares == "0" {
 		return 0
-	} else {
-		oneHourShares, err := strconv.ParseFloat(b.OneHourhShares, 32)
-		if err != nil {
-			return 0
-		}
-		oneHourEfficency = (float32(oneHourShares) / float32(b.OneHourhEstShares)) * 100
-		return oneHourEfficency
 	}
+	oneHourShares, err := strconv.ParseFloat(b.OneHourhShares, 32)
+	if err != nil {
+		return 0
+	}
+	oneHourEfficency = (float32(oneHourShares) / float32(b.OneHourhEstShares)) * 100
+	return oneHourEfficency
+
 }
 
 func (b *BlockStats) YestardayEfficency() float32 {
 	var yesterdayEfficency float32
 	if b.YesterdayShares == "0" {
 		return 0
-	} else {
-		yesterdayShares, err := strconv.ParseFloat(b.YesterdayShares, 32)
-		if err != nil {
-			return 0
-		}
-		yesterdayEfficency = (float32(yesterdayShares) / float32(b.YesterdayEstShares)) * 100
-		return yesterdayEfficency
 	}
+
+	yesterdayShares, err := strconv.ParseFloat(b.YesterdayShares, 32)
+	if err != nil {
+		return 0
+	}
+	yesterdayEfficency = (float32(yesterdayShares) / float32(b.YesterdayEstShares)) * 100
+	return yesterdayEfficency
+
 }
 
 func (b *BlockStats) WeekEfficency() float32 {
 	var WeekEfficency float32
 	if b.WeekShares == "0" {
 		return 0
-	} else {
-		WeekShares, err := strconv.ParseFloat(b.WeekShares, 32)
-		if err != nil {
-			return 0
-		}
-		WeekEfficency = (float32(WeekShares) / float32(b.WeekEstShares)) * 100
-		return WeekEfficency
 	}
+
+	WeekShares, err := strconv.ParseFloat(b.WeekShares, 32)
+	if err != nil {
+		return 0
+	}
+	WeekEfficency = (float32(WeekShares) / float32(b.WeekEstShares)) * 100
+	return WeekEfficency
+
 }
 
 func (b *BlockStats) FourWeekEfficency() float32 {
 	var fourWeekEfficency float32
 	if b.FourWeekshShares == "0" {
 		return 0
-	} else {
-		fourWeekShares, err := strconv.ParseFloat(b.FourWeekshShares, 32)
-		if err != nil {
-			return 0
-		}
-		fourWeekEfficency = (float32(fourWeekShares) / float32(b.FourWeekshEstShares)) * 100
-		return fourWeekEfficency
 	}
+	fourWeekShares, err := strconv.ParseFloat(b.FourWeekshShares, 32)
+	if err != nil {
+		return 0
+	}
+	fourWeekEfficency = (float32(fourWeekShares) / float32(b.FourWeekshEstShares)) * 100
+	return fourWeekEfficency
+
 }
 
 func (b *BlockStats) YearEfficency() float32 {
 	var yearEfficency float32
 	if b.YearShares == "0" {
 		return 0
-	} else {
-		yearShares, err := strconv.ParseFloat(b.YearShares, 32)
-		if err != nil {
-			return 0
-		}
-		yearEfficency = (float32(yearShares) / float32(b.YearEstShares)) * 100
-		return yearEfficency
 	}
+	yearShares, err := strconv.ParseFloat(b.YearShares, 32)
+	if err != nil {
+		return 0
+	}
+	yearEfficency = (float32(yearShares) / float32(b.YearEstShares)) * 100
+	return yearEfficency
 }
 
 func (b *BlockStats) TotalEfficency() float32 {
 	var totalEfficency float32
 	if b.TotalShares == "0" {
 		return 0
-	} else {
-		totalShares, err := strconv.ParseFloat(b.TotalShares, 32)
-		if err != nil {
-			return 0
-		}
-		totalEfficency = (float32(totalShares) / float32(b.TotalEstSahres)) * 100
-		return totalEfficency
 	}
+
+	totalShares, err := strconv.ParseFloat(b.TotalShares, 32)
+	if err != nil {
+		return 0
+	}
+	totalEfficency = (float32(totalShares) / float32(b.TotalEstSahres)) * 100
+	return totalEfficency
+
 }
